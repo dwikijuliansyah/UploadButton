@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Progress Button | DC</title>
+	<link rel="stylesheet" href="style2.css">
+	<!-- link Boxicons CDN  -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<div class="button">
+		<div class="content">
+			<i class="bx bx-cloud-upload"></i>
+			<span class="button-text">Upload</span>
+		</div>
+	</div>
+
+
+	<script>
+		
+		let button = document.querySelector(".button");
+
+		button.addEventListener("click" , ()=>{
+			button.classList.add("active")
+
+
+			setTimeout(()=>{
+				button.classList.remove("active");
+
+				document.querySelector("i").classList.replace("bx-cloud-upload", "bx-check-circle");
+				document.querySelector(".button-text").innerHTML = "Completed";
+
+			},6000) //1s = 1000ms
+		})
+
+	</script>
+</body>
+</html>
